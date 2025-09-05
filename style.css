@@ -481,7 +481,21 @@ h1, h2, h3 {
     transform: translateY(0);
 }
 
-/* Media Queries pour la réactivité */
+/* Images responsives */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Grille d'accueil responsive */
+.accueil-contenu-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 1024px) {
     .accueil-contenu-grid {
         grid-template-columns: 1fr;
@@ -502,15 +516,18 @@ h1, h2, h3 {
 
 @media (max-width: 900px) {
   .accueil-contenu-grid {
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
   }
   .projets-grille {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .hobbies-container {
+    display: flex;
     flex-direction: column;
+    gap: 1rem;
     align-items: center;
   }
   .competences-container {
@@ -520,6 +537,7 @@ h1, h2, h3 {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
   }
 }
 
@@ -574,6 +592,7 @@ h1, h2, h3 {
 @media (max-width: 600px) {
   body {
     font-size: 16px;
+    padding: 0 0.5rem;
   }
   .header, .footer {
     padding: 1rem;
@@ -586,5 +605,8 @@ h1, h2, h3 {
   .contact-form textarea {
     width: 100%;
     font-size: 1rem;
+  }
+  .projet-carte {
+    padding: 1rem;
   }
 }
