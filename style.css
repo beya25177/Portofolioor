@@ -500,6 +500,29 @@ h1, h2, h3 {
     }
 }
 
+@media (max-width: 900px) {
+  .accueil-contenu-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .projets-grille {
+    grid-template-columns: 1fr;
+  }
+  .hobbies-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .competences-container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -548,18 +571,20 @@ h1, h2, h3 {
     }
 }
 
-@media (max-width: 480px) {
-    .accueil-texte-container .accueil-title {
-        font-size: 1.8em;
-    }
-    .btn {
-        padding: 10px 20px;
-    }
-    .nav-link {
-        font-size: 1em;
-        padding: 6px 10px;
-    }
-    .contact-form-container {
-        padding: 20px;
-    }
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .header, .footer {
+    padding: 1rem;
+    text-align: center;
+  }
+  .accueil-title {
+    font-size: 2rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
